@@ -11,7 +11,7 @@ import (
 */
 func ApiRoutersInit(r *gee.Engine) {
 	apiRouters := r.Group("/api")
-	apiRouters.GET("/", controllers.ApiIndex)
-	apiRouters.GET("/add", controllers.ApiAdd)
-	apiRouters.GET("/delete", controllers.ApiDelete)
+	apiRouters.GET("/", controllers.ApiControllers{}.ApiIndex)
+	apiRouters.GET("/add", controllers.ApiControllers{}.ApiAdd)
+	apiRouters.GET("/delete", controllers.ApiControllers{}.ApiDelete)
 }
